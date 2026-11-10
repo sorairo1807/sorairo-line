@@ -331,57 +331,14 @@ body.application-open { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-.delivery-comparison {
+.delivery-diagram {
+  width: min(100%, 48rem);
+  margin: 2rem auto 1rem;
+}
+.delivery-diagram img {
   width: 100%;
-  margin: 2rem 0 .9rem;
-  border-collapse: separate;
-  border-spacing: 0;
-  table-layout: fixed;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: .5rem;
-  overflow: hidden;
-}
-.delivery-comparison caption {
-  margin-bottom: .8rem;
-  color: var(--muted);
-  font-size: .9rem;
-  text-align: left;
-}
-.delivery-comparison th {
-  width: 35%;
-  padding: 1.5rem 5%;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-align: left;
-  vertical-align: middle;
-}
-.delivery-comparison td {
-  padding: 1.5rem 5%;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-.delivery-comparison-other { color: var(--muted); }
-.delivery-comparison-us { color: var(--green); background: #e2f0e5; }
-.delivery-comparison-us th, .delivery-comparison-us td { border-top: 1px solid #c5daca; }
-.delivery-qualifier {
-  display: inline-block;
-  margin-right: .8rem;
-  font-size: .85rem;
-  font-weight: 700;
-  vertical-align: baseline;
-}
-.delivery-comparison strong {
-  font-size: clamp(1.8rem, 3.8vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -.04em;
-  line-height: 1.4;
+  height: auto;
 }
 @media (max-width: 48rem) {
-  .delivery-comparison { margin-top: 1.4rem; }
-  .delivery-comparison caption { font-size: .8rem; }
-  .delivery-comparison th { width: 35%; padding: 1.15rem 5%; font-size: .9rem; }
-  .delivery-comparison td { padding: 1.15rem 4%; }
-  .delivery-qualifier { display: block; margin: 0 0 .15rem; font-size: .7rem; }
-  .delivery-comparison strong { font-size: clamp(1.65rem, 7vw, 2.2rem); }
+  .delivery-diagram { width: 100%; margin: 1.4rem 0 .8rem; }
 }
