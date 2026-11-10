@@ -243,6 +243,13 @@ body.application-open { overflow: hidden; }
   .industry-body h3 { font-size: 1rem; }
 }
 @media (max-width: 48rem) {
+  .concerns-figure,
+  .usage-image,
+  .setup-image,
+  .speed-image {
+    display: none;
+  }
+
   :root { --page-gutter: 5%; }
   html { scroll-padding-top: 4rem; }
   body { font-size: .94rem; }
