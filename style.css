@@ -94,7 +94,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 }
 .hero-inner { width: 56%; max-width: 40rem; min-width: 0; }
 .hero-simple-title { margin: 0 0 .6rem; font-size: clamp(3.3rem, 5.4vw, 5.4rem); line-height: 1.12; letter-spacing: -.065em; }
-.hero-simple-title span { color: var(--orange); margin-left: .08em; white-space: nowrap; }
+.hero-simple-title .hero-zero { color: var(--orange); margin-left: .08em; white-space: nowrap; }
 .hero-monthly { margin-bottom: 2rem !important; font-size: 1.35rem; font-weight: 700; line-height: 1.5; }
 .hero-monthly strong { color: var(--green); font-size: 1.65em; letter-spacing: -.04em; white-space: nowrap; }
 .hero-monthly small { font-size: .65em; white-space: nowrap; }
@@ -251,7 +251,7 @@ body.application-open { overflow: hidden; }
   .hero.hero-simple { display: block; min-height: 0; padding-top: 1.8rem; padding-bottom: 2.7rem; background: linear-gradient(90deg, #fff 0%, #fffffff5 28%, #ffffff00 78%), linear-gradient(0deg, #fff, #ffffff00 35%), url('hero.jpg') right top / auto 17rem no-repeat; }
   .hero-inner { width: 100%; max-width: none; }
   .hero-simple-title { width: 70%; margin-bottom: .5rem; font-size: clamp(2.4rem, 10.5vw, 3.5rem); line-height: 1.2; }
-  .hero-simple-title span { display: block; margin-left: 0; font-size: 1.6em; line-height: 1.1; }
+  .hero-simple-title .hero-zero { display: block; margin-left: 0; font-size: 1.6em; line-height: 1.1; }
   .hero-monthly { width: 76%; font-size: .95rem; margin-bottom: 1.8rem !important; }
   .hero-monthly strong { font-size: 1.55em; }
   .hero-monthly small { font-size: .7em; }
@@ -341,4 +341,125 @@ body.application-open { overflow: hidden; }
 }
 @media (max-width: 48rem) {
   .delivery-diagram { width: 100%; margin: 1.4rem 0 .8rem; }
+}
+
+.hero-mobile-photo { display: none; }
+.price-amount { font-variant-numeric: tabular-nums; }
+@media (max-width: 48rem) {
+  body { font-feature-settings: "palt"; text-size-adjust: 100%; }
+  .brandbar { padding-block: .7rem; }
+  .brand { font-size: .88rem; letter-spacing: -.025em; }
+  .header-cta { border-radius: .35rem; padding: .55rem .9rem; }
+  .section { padding-block: 3.4rem; }
+  .section h2 { font-size: clamp(1.4rem, 6.1vw, 1.75rem); line-height: 1.6; letter-spacing: -.035em; text-wrap: balance; }
+  #problems h2, #features h2, #industries h2, #challenge h2,
+  #plans > h2, #speed h2, #flow h2, #faq h2 { text-align: center; }
+  .hero.hero-simple { background: #fff; padding-top: 1.7rem; padding-bottom: 3rem; }
+  .hero-inner { display: flex; flex-direction: column; align-items: stretch; }
+  .hero-simple-title { order: 0; width: 100%; margin: 0 0 .6rem; font-size: clamp(2.1rem, 9.1vw, 3rem); text-align: center; line-height: 1.15; letter-spacing: -.06em; white-space: nowrap; }
+  .hero-simple-title .hero-zero { display: inline; margin-left: .08em; font-family: Arial, "Hiragino Sans", sans-serif; font-size: 1.85em; font-weight: 800; vertical-align: -.03em; }
+  .hero-monthly { order: 1; width: 100%; margin: 0 0 1.3rem !important; text-align: center; font-size: .95rem; }
+  .hero-monthly strong { font-size: 1.85em; font-family: Arial, "Hiragino Sans", sans-serif; font-weight: 800; }
+  .hero-mobile-photo { order: 2; display: block; width: 100%; margin: 0 0 1rem; }
+  .hero-mobile-photo img { width: 100%; height: auto; aspect-ratio: 1.9; object-fit: cover; object-position: 70% 38%; border-radius: .6rem; }
+  .hero-simple .cta { order: 3; margin: 0; font-size: .9rem; line-height: 1.55; padding-block: 1rem; }
+  .hero-simple-copy { order: 4; margin: 1.8rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+  .hero-simple-copy p { font-size: .88rem; line-height: 1.95; margin-bottom: 1rem; }
+  .hero-simple-copy p:last-child { margin-bottom: 0; }
+  .cta { border-radius: .5rem; font-weight: 800; }
+  .concerns-layout { margin-top: 1.5rem; }
+  .problem-grid li { padding-block: .85rem; font-size: .88rem; line-height: 1.85; border-color: #e3e9e4; }
+  .problem-grid li::before { top: .85rem; }
+  .highlight { margin-top: 1.6rem; padding: 1.2rem 6%; border-left: 0; border-radius: .5rem; text-align: center; font-size: .96rem; line-height: 1.9; }
+  .feature-intro { margin: 0 0 1.5rem !important; text-align: center; font-size: .88rem; }
+  .feature-grid { margin-top: 1.5rem; }
+  .feature-card { padding-block: 1.3rem; column-gap: 5%; }
+  .feature-card h3 { font-size: 1.02rem; line-height: 1.65; margin-bottom: .35rem; }
+  .feature-card p { font-size: .87rem; line-height: 1.9; }
+  .feature-icon { color: var(--green); margin-top: .1rem; }
+  .industry-grid { gap: 1.4rem; }
+  .industry-card { border-radius: .6rem; overflow: hidden; }
+  .industry-body { padding: 1.3rem 6%; }
+  .industry-body h3 { font-size: 1.1rem; margin-bottom: .8rem; }
+  .industry-body strong { font-weight: 700; padding-top: 1rem; }
+  .setup-copy p, .setup-copy li { font-size: .88rem; line-height: 1.95; }
+  .setup-copy li { padding-block: .45rem; }
+  .challenge .soft-card > strong { text-align: center; font-size: 1.02rem; line-height: 1.9; margin-top: 1.6rem; padding-top: 1.5rem; }
+  #plans { background: #f5f7f4; }
+  .daily-copy { margin-top: 1.4rem !important; text-align: center; font-size: 1.05rem; line-height: 1.7; text-wrap: balance; }
+  .daily-copy > .billing-monthly, .daily-copy > .billing-yearly { font-family: Arial, "Hiragino Sans", sans-serif; font-size: 1.8em; }
+  .daily-note { margin-top: .6rem !important; font-size: .67rem; line-height: 1.8; }
+  .plans-sub { margin-top: 1.3rem !important; font-size: .88rem; text-align: center; }
+  .billing-tabs { padding: .3rem; margin-top: 1.3rem; margin-bottom: 1.6rem; border: 1px solid #cedbd0; border-radius: .6rem; background: #fff; gap: .3rem; }
+  .billing-tabs button { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 3.5rem; padding: .65rem .3rem; border-radius: .35rem; font-size: .85rem; line-height: 1.5; }
+  .billing-tabs button[aria-selected='true'] { color: white; background: var(--green); box-shadow: none; }
+  .billing-tabs button span { margin-top: .25rem; font-size: .6rem; border-radius: .15rem; }
+  .plans { gap: 1.6rem; }
+  .plan { border-radius: .8rem; border-color: #d0ddd2; }
+  .plan-premium { border-color: #e39a72; }
+  .plan-catch { padding: .85rem 5%; font-size: .86rem; }
+  .plan-top { padding: 1.5rem 6% 1.2rem; }
+  .plan-top h3 { font-size: 1.4rem; letter-spacing: -.04em; }
+  .plan-top .plan-intro { font-size: .84rem; line-height: 1.85; margin-bottom: 1rem; }
+  .plan-top .plan-service { font-size: .83rem; line-height: 1.8; }
+  .plan-body { padding: 1.4rem 6% 1.5rem; }
+  .plan-body .discount, .plan-body .annual-saving { margin-bottom: .65rem; padding: .3rem .6rem; background: #fff1e4; border-radius: .2rem; font-size: .7rem; }
+  .plan-body .old { margin: 0 0 .3rem; font-size: .73rem; }
+  .plan-body .price { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem; margin: .2rem 0 1.2rem; color: var(--green); line-height: 1.25; letter-spacing: -.04em; }
+  .price-period, .price-unit { font-size: .95rem; font-weight: 700; letter-spacing: 0; }
+  .price-amount { font-family: Arial, sans-serif; font-size: clamp(2rem, 9.8vw, 2.8rem); font-weight: 800; }
+  .plan-body .price small { flex-basis: 100%; margin-top: .35rem; font-size: .68rem; line-height: 1.7; color: var(--muted); }
+  .plan-body > p { font-size: .85rem; line-height: 1.9; }
+  .plan-body li { font-size: .84rem; line-height: 1.85; padding-block: .4rem; }
+  .plan-body li::before { top: .4rem; }
+  .ribbon { margin-top: .7rem; padding-top: 1rem; font-size: .85rem; }
+  .plan-cta { min-height: 3.5rem; border-radius: .45rem; font-size: .92rem; }
+  #plans > .note, .plan-cta-note { font-size: .7rem; line-height: 1.9; }
+  .speed-header p { text-align: center; font-size: .88rem; line-height: 1.9; }
+  .delivery-diagram { margin-top: 1.7rem; border-radius: .5rem; overflow: hidden; }
+  .speed-compare-note { margin-top: .9rem !important; line-height: 1.9; }
+  .process-heading p { text-align: center; font-size: .9rem; }
+  .process-grid { margin-top: 1.8rem; gap: 2.3rem; }
+  .process-step { padding: 1.4rem 5%; background: #fff; border-radius: .55rem; border-color: #d9e2da; }
+  .process-number { color: var(--green); font-weight: 800; font-size: .65rem; }
+  .process-step-copy strong { font-size: .97rem; line-height: 1.65; margin-bottom: .5rem; }
+  .process-step-copy > span { font-size: .84rem; line-height: 1.9; }
+  .process-step:not(:last-child)::after { bottom: -1.5rem; }
+  .faq-accordions summary { font-size: .9rem; line-height: 1.8; padding-block: 1.3rem; }
+  .faq-accordions summary::after { top: 1.3rem; }
+  .faq-answer { font-size: .87rem; line-height: 1.95; }
+  .final { padding-top: 13rem; }
+  .final h2 { font-size: 1.4rem; line-height: 1.7; text-wrap: balance; }
+  .final-title-line { display: block; }
+  .final p { font-size: .88rem; line-height: 1.95; }
+  .final .cta { margin-top: 1rem; }
+  .footlinks { margin-block: 1.2rem; gap: 1rem; }
+  .application-dialog { border-radius: .8rem; }
+  .application-content { padding-top: 1.7rem; padding-bottom: 1.5rem; }
+  .application-dialog h2 { font-size: 1.22rem; letter-spacing: -.025em; }
+  .application-summary { padding-block: .3rem; border-radius: .5rem; }
+  .application-summary > div { padding-block: .8rem; font-size: .8rem; }
+  .application-agreement { border-radius: .5rem; font-size: .8rem; }
+  .application-submit { min-height: 3.5rem; border-radius: .45rem; }
+}
+
+.hero-title-mobile { display: none; }
+.application-payment-note:not([hidden]) { display: block; margin-top: .15rem; font-size: .75rem; color: var(--muted); font-weight: 400; }
+@media (max-width: 48rem) {
+  .hero.hero-simple {
+    padding: clamp(16rem, 70vw, 22rem) var(--page-gutter) 2rem;
+    background: linear-gradient(180deg, #072a1900 0%, #072a1926 35%, #072a19df 62%, #072a19 84%), url('hero.jpg') 72% top / auto 100% no-repeat;
+    color: white;
+  }
+  .hero-inner { align-items: stretch; }
+  .hero-title-desktop { display: none; }
+  .hero-title-mobile { display: inline; font-size: .65em; font-weight: 800; vertical-align: .2em; margin-right: .25em; }
+  .hero-simple-title { color: white; width: 100%; margin: 0 0 .8rem; font-size: clamp(2.6rem, 12.5vw, 4rem); text-align: center; line-height: 1.15; letter-spacing: -.04em; }
+  .hero-simple-title .hero-zero { color: white; font-size: 1.7em; margin-left: 0; vertical-align: -.03em; }
+  .hero-monthly { color: white; margin-bottom: 1.5rem !important; font-size: 1.1rem; }
+  .hero-monthly strong { color: white; font-size: 1.85em; }
+  .hero-monthly small { color: #ffffffde; font-size: .6em; }
+  .hero-mobile-photo, .hero-simple-copy { display: none; }
+  .hero-simple .cta { min-height: 3.7rem; background: var(--orange); font-size: .92rem; border: 1px solid #ffffff40; }
+  .mobile-heading-line { display: block; }
 }
