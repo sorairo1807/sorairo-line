@@ -174,17 +174,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .speed-header p { font-size: 1rem; }
 .speed-header strong { color: var(--green); }
 .speed-image img { width: 100%; border-radius: .5rem; }
-.speed-compare { display: grid; grid-template-columns: minmax(0, 1fr) 4% minmax(0, 1fr); gap: 2%; margin: 2rem 0 .8rem; }
-.speed-compare-item { display: flex; flex-direction: column; justify-content: center; min-width: 0; gap: .7rem; padding: 1.8rem; border-radius: .4rem; }
-.speed-compare-other { background: #fff; border: 1px solid var(--line); }
-.speed-compare-us { background: var(--green); color: #fff; }
-.compare-label { font-size: .85rem; font-weight: 700; }
-.speed-compare-item strong { display: flex; align-items: baseline; gap: .5rem; font-size: 1rem; }
-.speed-compare-item strong > span { font-size: clamp(1.9rem, 3vw, 3rem); letter-spacing: -.05em; line-height: 1.4; }
-.speed-compare-arrow { display: grid; place-items: center; color: var(--orange); font-size: 1.8rem; }
-.delivery-calendar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .4rem; width: 85%; margin-top: .4rem; }
-.delivery-calendar i { height: .8rem; border-radius: .15rem; background: #d9ded8; }
-.calendar-us i { background: #cceccf; }
 .speed-compare-note { color: var(--muted); font-size: .7rem; }
 .process-section { background: #fff; }
 .process-heading p { color: var(--muted); }
@@ -312,13 +301,6 @@ body.application-open { overflow: hidden; }
   .speed-intro { display: flex; flex-direction: column; gap: 1.2rem; align-items: stretch; }
   .speed-header p { font-size: .9rem; }
   .speed-image { width: 100%; }
-  .speed-compare { grid-template-columns: minmax(0, 1fr); gap: .6rem; margin-top: 1.4rem; }
-  .speed-compare-item { padding: 1.1rem 6%; gap: .4rem; }
-  .speed-compare-item strong { font-size: .9rem; }
-  .speed-compare-item strong > span { font-size: clamp(1.8rem, 8vw, 2.5rem); }
-  .speed-compare-arrow { transform: rotate(90deg); font-size: 1.4rem; line-height: 1; height: 1.2rem; }
-  .delivery-calendar { width: 70%; gap: .35rem; margin-top: .3rem; }
-  .delivery-calendar i { height: .55rem; }
   .speed-compare-note { font-size: .68rem; }
   .process-grid { width: 100%; margin-top: 1.5rem; gap: 2.1rem; }
   .process-step { grid-template-columns: minmax(0, 15%) minmax(0, 1fr); gap: 5%; padding: 1.2rem 5%; border-radius: .3rem; }
@@ -348,3 +330,58 @@ body.application-open { overflow: hidden; }
   .application-submit { font-size: .9rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.delivery-comparison {
+  width: 100%;
+  margin: 2rem 0 .9rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.delivery-comparison caption {
+  margin-bottom: .8rem;
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: left;
+}
+.delivery-comparison th {
+  width: 35%;
+  padding: 1.5rem 5%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: middle;
+}
+.delivery-comparison td {
+  padding: 1.5rem 5%;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.delivery-comparison-other { color: var(--muted); }
+.delivery-comparison-us { color: var(--green); background: #e2f0e5; }
+.delivery-comparison-us th, .delivery-comparison-us td { border-top: 1px solid #c5daca; }
+.delivery-qualifier {
+  display: inline-block;
+  margin-right: .8rem;
+  font-size: .85rem;
+  font-weight: 700;
+  vertical-align: baseline;
+}
+.delivery-comparison strong {
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.4;
+}
+@media (max-width: 48rem) {
+  .delivery-comparison { margin-top: 1.4rem; }
+  .delivery-comparison caption { font-size: .8rem; }
+  .delivery-comparison th { width: 35%; padding: 1.15rem 5%; font-size: .9rem; }
+  .delivery-comparison td { padding: 1.15rem 4%; }
+  .delivery-qualifier { display: block; margin: 0 0 .15rem; font-size: .7rem; }
+  .delivery-comparison strong { font-size: clamp(1.65rem, 7vw, 2.2rem); }
+}
