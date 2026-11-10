@@ -515,3 +515,20 @@ body.application-open { overflow: hidden; }
  .example-menu-labels li { padding: .3rem .6rem; font-size: .7rem; }
  .examples-note { text-align: left; font-size: .68rem; }
 }
+
+@media (min-width: 48.001rem) {
+  .section h2,
+  .section .feature-intro,
+  .examples-heading > p,
+  .daily-copy,
+  .daily-note,
+  .plans-sub,
+  .process-heading > p,
+  .final-content > p {
+    text-align: center;
+  }
+
+  .section .feature-intro {
+    margin-inline: auto;
+  }
+}
